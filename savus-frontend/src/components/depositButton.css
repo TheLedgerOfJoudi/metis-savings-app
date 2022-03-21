@@ -1,0 +1,45 @@
+
+.deposit-container {
+    padding-left: 25%;
+    width: 50%;
+}
+
+input[type=number] {
+    width: 98%;
+    padding: 15px 1%;
+    display: inline-block;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=number]:focus{
+    background-color: #ddd;
+    outline: none;
+}
+
+button {
+    background-color: #04AA6D;
+    width: 100%;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+button[type=submit]{
+    background-color: #04AA6D;
+    width: 20%;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+button:hover {
+    opacity:1;
+}
