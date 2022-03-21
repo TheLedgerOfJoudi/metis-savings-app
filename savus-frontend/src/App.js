@@ -3,11 +3,11 @@ import './App.css';
 import DepositButton from './components/depositButton';
 import WithdrawButton from './components/withdrawButton';
 import { useEffect, useState } from "react";
-import {Header} from './components/Header';
-import {InfoBox} from './components/InfoBox';
+import { Header } from './components/Header';
+import { InfoBox } from './components/InfoBox';
 
 function App() {
-
+  const [expiration, setExpiration] = useState(0);
   const [hasMetaMask, setHasMetaMask] = useState(false);
   useEffect(() => {
     if (typeof window.ethereum !== "undefined") {
@@ -15,13 +15,17 @@ function App() {
     }
   });
 
+  const changeExpiration = (value) => {
+    setExpiration(value);
+  }
+
   return (
     <div className="App">
       {hasMetaMask ? <div>
-        <Header/>
-        <DepositButton />
+        <Header />
+        <DepositButton changeExpiration={changeExpiration}/>
         <WithdrawButton />
-        <InfoBox/>
+        <InfoBox expiration={expiration}/>
       </div>
         : "Please install MetaMask"}
     </div>

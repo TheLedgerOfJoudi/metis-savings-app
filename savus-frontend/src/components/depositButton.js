@@ -51,6 +51,7 @@ class DepositButton extends React.Component{
 
     async handleSubmit(event){
         event.preventDefault()
+        this.props.changeExpiration(this.state.duration);
         const provider = new ethers.providers.Web3Provider(window.ethereum)
         const signer = provider.getSigner()
         const contract = new ethers.Contract(

@@ -26,7 +26,7 @@ class WithdrawButton extends React.Component{
             response = await contract.withdrawAll();
         }
         catch(error){
-            console.log(error)
+            alert("Your goal amount or the expiration time is not met yet!")
         }
     }
 
